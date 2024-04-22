@@ -1,0 +1,20 @@
+// C++ code //
+void setup()
+{
+  pinMode(4, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  int pr = analogRead(A1);
+  Serial.print("The voltage provided: ");
+  Serial.println(pr);
+  if (pr<75){
+    digitalWrite(4,HIGH);
+  }
+  else{
+    digitalWrite(4,LOW);
+  }
+  delay(500);
+}
